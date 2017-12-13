@@ -22,7 +22,6 @@ class CashRegister
       "There is no discount to apply."
     else
       discounted = total * (discount/100)
-      binding.pry
       self.total = total - discounted
       "After the discount, the total comes to $#{total}."
     end
