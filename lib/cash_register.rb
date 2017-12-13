@@ -18,13 +18,14 @@ class CashRegister
   end
 
   def apply_discount
-    if @discount == 0
-      message = "There is no discount to apply."
+    if self.discount == nil
+      "There is no discount to apply."
     else
-      @total = @total * (100 - @discount)/100
-      message = "After the discount, the total comes to $#{total}."
+      discounted = total * (discount/100)
+      binding.pry
+      self.total = total - discounted
+      "After the discount, the total comes to $#{total}."
     end
-    message
   end
 
   def items
